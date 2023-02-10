@@ -13,13 +13,31 @@ const api ={
 
 
 function App() {
- 
+  
+  const date =()=>{
+    let options={year:"numeric",month:"long",day:"numeric"}
+  
+     let date = new Date();
+      date  = date.toLocaleDateString("en-US",options);
+      return `${date}`;
+  }
  
   
  
   return (
     <div className="App">
-      app
+       <main>
+        <div className="search-box">
+          <input type ="text"
+                 className="search-bar"
+                 placeholder="search..."
+                 />
+          <div className="Location-box">
+            <div className="Location">charlotte</div>
+            <div className='date'>{date(new Date())}</div>
+          </div>
+         </div>
+        </main>
     </div>   
   );
 }
