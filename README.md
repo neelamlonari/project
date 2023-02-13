@@ -16,7 +16,8 @@ Launch the application from Visual Code
 Site can be accessible using below URL on local lachine
 http://localhost:3000/weather
 
-#Prerequisite
+#Prerequisite//
+
 To run the site you must Node js installed on your machine
 
 Please use below instruction to install
