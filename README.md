@@ -10,11 +10,14 @@ This application is developed usinng React JS.
 React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies
 It is using various feature of the react such Component, Use State etc
 
-#How to use
+#How to use  
 
-Clone the repository in Visua Code
-Launch the application from Visual Code
-Site can be accessible using below URL on local lachine
+Clone the repository in Visua Code  
+
+Launch the application from Visual Code  
+
+Site can be accessible using below URL on local lachine  
+
 http://localhost:3000/weather
 
 #Prerequisite
