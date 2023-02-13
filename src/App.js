@@ -1,18 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState } from 'react';
 import "./index.css"
+import windy from './images/windy.png';
 
 const api ={
-  
   key: "35b5991713a9a5059442e37f0ef572be",
   base:"https://api.openweathermap.org/data/2.5/",
-  lat :"35.2272086",
-  lon:"-80.8430827"
-
 }
  
-
-
-
 function App() {
   const [query,setQuery]= useState('');
   const [weather,setWeather]= useState({});
@@ -22,14 +16,14 @@ function App() {
       fetch(`${api.base}/weather?q=${query}&appid=${api.key}`)
       .then(res => res.json())
       .then(result => {
-        setWeather(result);
-        setQuery('');
-        console.log(result);
-      })
-      }
+          setWeather(result);
+          setQuery('');
+          console.log(result);
+        }
+      )
     }
+  }
    
-  
   const date =()=>{
     let options={year:"numeric",month:"long",day:"numeric"}
   
@@ -39,7 +33,7 @@ function App() {
   }
   return (
     <div  className={(typeof weather.main !="undefined") ?
-     ((weather.main.temp > 16) ? 'App warm' : 'App'):'App'}>
+     ((weather.main.temp > 20) ? 'App warm' : 'App'):'App'}>
       <main>
         <div className="search-box">
           <input type ="text"
@@ -61,9 +55,10 @@ function App() {
             <div className='weather'>{weather.weather[0].main}</div>
           </div>
           < div className= "wind-box">
-            <div className = "wind">{Math.round(weather.wind.speed)}</div>
+            <div className = "wind"><img src={windy} alt={""}/> {Math.round(weather.wind.speed)} </div>
           </div>
         </div>
+      
         ):('')}
       </main>
      </div>
